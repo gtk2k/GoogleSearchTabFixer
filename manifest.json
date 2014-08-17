@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Google検索 タブ固定",
+  "version": "0.0.1",
+  "description": "Googleで検索したときのタブを固定する",
+  "content_scripts": [
+	{
+      "matches": ["https://www.google.com/*", "https://www.google.co.jp/*"],
+	  "js": [
+		  "cs.js"
+	  ],
+	  "run_at": "document_start"
+	}
+  ],
+  "web_accessible_resources": [
+    "64_disable.png",
+    "64_off.png",
+    "64_on.png"
+  ]
+}
